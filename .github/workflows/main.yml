@@ -25,6 +25,9 @@ jobs:
       - name: Build project
         run: make build-for-test
 
+      - name: Check containers status
+        run: make status
+
       - name: Run tests
         run: make tests
 

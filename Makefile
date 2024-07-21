@@ -12,6 +12,9 @@ stop:
 build-for-test:
 	docker-compose -f docker-compose.dev.yml up --build -d
 
+status:
+	docker-compose -f docker-compose.dev.yml ps
+
 tests:
 	docker-compose -f docker-compose.dev.yml exec -T app python3 manage.py test
 
