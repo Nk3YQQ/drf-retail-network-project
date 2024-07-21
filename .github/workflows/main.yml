@@ -31,5 +31,9 @@ jobs:
       - name: Run tests
         run: make tests
 
+      - name: View logs if failure
+        if: failure()
+        run: make logs
+
       - name: Clean up
         run: make clean

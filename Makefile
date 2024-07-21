@@ -15,6 +15,9 @@ build-for-test:
 status:
 	docker-compose -f docker-compose.dev.yml ps
 
+logs:
+	docker-compose -f docker-compose.dev.yml logs
+
 tests:
 	docker-compose -f docker-compose.dev.yml exec -T app python3 manage.py test
 
