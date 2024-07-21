@@ -11,6 +11,7 @@ stop:
 
 build-for-test:
 	docker-compose -f docker-compose.dev.yml up --build -d
+	docker-compose -f docker-compose.dev.yml exec -T app python3 config/settings.py
 
 status:
 	docker-compose -f docker-compose.dev.yml ps
