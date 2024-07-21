@@ -30,6 +30,7 @@ jobs:
             exit 1
           else
             echo "SECRET_KEY is set"
+          fi
 
       - name: Build project
         run: make build-for-test
