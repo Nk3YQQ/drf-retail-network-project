@@ -9,7 +9,7 @@ entrypoint:
 stop:
 	docker-compose down
 
-run-for-test:
+build-for-test:
 	docker-compose -f docker-compose.dev.yml up --build -d
 
 tests:
