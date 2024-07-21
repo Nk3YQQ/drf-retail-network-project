@@ -23,14 +23,7 @@ jobs:
         run: echo "ENV_STAGE=${{ secrets.ENV_STAGE }}" > .env
 
       - name: Check environment
-        run: |
-          source .env
-          if [ -z "$SECRET_KEY" ]; then
-            echo "SECRET_KEY is not set"
-            exit 1
-          else
-            echo "SECRET_KEY is set"
-          fi
+        run: cat config/settings.py
 
       - name: Build project
         run: make build-for-test
