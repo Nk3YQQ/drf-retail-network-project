@@ -1,6 +1,11 @@
 run:
 	docker-compose up --build -d
 
+entrypoint:
+	python3 manage.py migrate
+	python3 manage.py collectstatic --noinput
+	gunicorn --config gunicorn_config.py config.wsgi:application
+
 stop:
 	docker-compose down
 
