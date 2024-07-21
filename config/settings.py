@@ -32,12 +32,6 @@ DEBUG = bool(int(os.getenv('DEBUG')))
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
 
-
-print(SECRET_KEY)
-print(DEBUG)
-print(ALLOWED_HOSTS)
-
-
 # Application definition
 
 INSTALLED_APPS = [
