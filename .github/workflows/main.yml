@@ -20,7 +20,9 @@ jobs:
           docker-version: '20.10.7'
 
       - name: Create .env file for tests
-        run: echo "ENV_STAGE=${{ secrets.ENV_STAGE }}" > .env
+        run: | 
+          echo "ENV_STAGE=${{ secrets.ENV_STAGE }}" > .env
+          cat .env
 
       - name: Build project
         run: make build-for-test
