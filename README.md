@@ -32,13 +32,16 @@ drf-retail-network-project/
         |—— test_network_node_products.py
         |—— test_user.py
     |—— users/ # Приложение пользователей
-        |—— migartions/
+        |—— migrations/
         |—— __init__.py
-        |—— database.py
+        |—— admin.py
+        |—— apps.py
         |—— models.py
-        |—— schemas.py
+        |—— permissions.py
+        |—— serializers.py
         |—— services.py
-        |—— routers.py
+        |—— urls.py
+        |—— views.py
     |—— .dockerignore
     |—— .env.sample
     |—— .flake8
