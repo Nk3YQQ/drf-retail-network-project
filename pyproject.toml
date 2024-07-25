@@ -20,6 +20,7 @@ python-dotenv = "^1.0.1"
 coverage = "^7.6.0"
 coverage-badge = "^1.1.1"
 gunicorn = "^22.0.0"
+pillow = "^10.4.0"
 
 [tool.black]
 line-length = 119
