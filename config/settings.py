@@ -44,6 +44,9 @@ INSTALLED_APPS = [
 
     "rest_framework",
     "drf_spectacular",
+
+    "network",
+    "users",
 ]
 
 MIDDLEWARE = [
@@ -113,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "ru-ru"
 
 TIME_ZONE = "UTC"
 
@@ -151,3 +154,10 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
 }
+
+AUTH_USER_MODEL = 'users.User'
+
+LOGIN_URL = '/users/login'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
